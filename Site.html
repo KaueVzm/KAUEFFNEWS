@@ -1,0 +1,182 @@
+<html>
+    <head>
+ <meta charset="UTF-8">
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+<script
+  src="https://code.jquery.com/jquery-3.5.1.js"
+  integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc="
+  crossorigin="anonymous"></script>
+  
+<style>
+*{
+    
+margin: 0;
+font-family: Sans-Serif;
+padding: 0;
+}
+#menu{
+    
+background-color: #160D47;
+width: 250px;
+height: 70%;
+position: fixed;
+
+left: -250px;
+
+transition: left 0.7s;
+}
+#menu #logoD{
+    color: white;
+    font-weight: bold;
+    text-align: center;
+    line-height: 40px;
+    font-size: 25px;
+    border-bottom: 2px solid red;
+}
+#menu ul {
+    
+ list-style: none;
+    
+}
+#menu ul li {
+    line-height: 59px;
+    border-bottom: 1px solid white;
+}
+#menu ul li a {
+    color: white;
+    text-decoration: none;
+    font-size: 26px;
+    padding-left: 30px;
+    font-weight: bold;
+    display: block;
+}
+#menu ul li a:hover{
+    
+    background-color: #370707;
+    
+}
+#menu ul ul li a {
+    font-size: 20px;
+    font-weight: 300px;
+    padding-left: 60px;
+    background-color: #131313;
+}
+#menu ul ul{
+    display: none;
+}
+#menu ul .itensfre.mostra{
+    display: block;
+}
+.btnAbre{
+    position: absolute;
+    top: 12px;
+    left: 810px;
+    background-color: black;
+    color: white;
+    border-radius: 5px ;
+    cursor: pointer;
+}
+.btnAbre span{
+    font-size: 100px;
+}
+#menu.mostra{
+    left: 0;
+}
+#btnFecha{
+    position: relative;
+    left: 20px;
+    top: 3px;
+    border: 1px solid white;
+    border-radius: 5px;
+}
+#btnFecha:hover{
+    border:  1px solid red;
+}
+#menu1 ul{
+    
+ margin: 0;
+ background-color: black;
+ list-style: none;
+    
+}
+#menu1 ul li a {
+    padding: 54px 10px;
+    display: inline-block;
+    color: black;
+}
+.logof{
+ color: white;
+ font-family: Segoe UI;
+ position: absolute;
+ top: 27px;
+ left: 20px;
+ font-size: 55px;
+}
+</style>
+    </head>
+        <body>
+<div class="btnAbre"><span class="material-icons">menu_open</span></div>
+
+<h1 class="logof">KAUEFFNEWS</h1>
+
+<nav id="menu">
+    
+<div id="logoD">KAUEFFNEWS<span class="material-icons" id="btnFecha">close</span></div>
+    <ul>
+        
+        
+        
+    <li><a href="#">INICIO</a></li>
+    
+    <li><a href="#" class="frmts">FERRAMENTAS<span class="material-icons">arrow_right</span></a>
+    <ul class="itensfre">
+    
+    <li><a href="#">ESPAÇO INVISIVEL</a></li>
+    <li><a href="#">CODIGUI</a></li>
+    <li><a href="#">EM BREVE</a></li>
+    <li><a href="#">EM BREVE</a></li>
+    
+    </ul>
+    </li>
+    <li><a href="#">BANNERS</a></li>
+
+
+    </ul>
+</nav>
+<div id="menu1"> 
+
+<ul>
+
+  <li><a href="#">OI</a></li>
+
+ </ul>
+ 
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<script>
+    
+$('.frmts').click(function(){
+    $('#menu ul .itensfre').toggleClass('mostra');
+});
+$('.btnAbre').click(function(){
+    $('#menu').toggleClass('mostra');
+})
+$('#btnFecha').click(function(){
+    $('#menu').toggleClass('mostra');
+})
+</script>
+        </body>
+</html>
